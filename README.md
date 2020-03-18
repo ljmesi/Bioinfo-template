@@ -51,11 +51,10 @@ have also given some inspiration to some parts of the project structure.
     | |- bibliography.bib           # BibTeX formatted references
     | |- csl/                       # csl files to format references
     | |- study.Rmd                  # executable Rmarkdown for this study, if applicable
-    | +- output/                    # images and other graphics for the presentation
-    | | |- study.md                 # Markdown (GitHub) version of the *.Rmd file
-    | | |- study.tex                # TeX version of *.Rmd file
-    | | |- study.pdf                # PDF version of *.Rmd file
-    | | |- study.html               # html version of *.Rmd file
+    | |- study.md                  # Markdown (GitHub) version of the *.Rmd file
+    | |- study.tex                 # TeX version of *.Rmd file
+    | |- study.pdf                 # PDF version of *.Rmd file
+    | |- study.html                    # html version of *.Rmd file
     |
     |- data                         # raw and primary data, are not changed once created
     | |- references/                # reference files to be used in analysis
