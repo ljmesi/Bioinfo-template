@@ -30,22 +30,26 @@ RUN apt-get update \
     file \
     git \
     libapparmor1 \
-    libclang-dev \
     libcurl4-openssl-dev \
     libedit2 \
     libssl-dev \
     lsb-release \
-    multiarch-support \
     psmisc \
     procps \
     python-setuptools \
     sudo \
-    wget bzip2 ca-certificates \
-    libglib2.0-0 libxext6 libsm6 libxrender1 exonerate curl libwww-perl libnet-perl \
-    libxml-simple-perl build-essential gcc-multilib apt-utils perl expat \
-    libexpat-dev cpanminus \
-    # This is needed for multiline grep searches
-    pcre2-utils \
+    wget \
+    libclang-dev \
+    libclang-3.8-dev \
+    libobjc-6-dev \
+    libclang1-3.8 \
+    libclang-common-3.8-dev \
+    libllvm3.8 \
+    libobjc4 \
+    libgc1c2 \
+    bzip2 \
+    curl \
+    build-essential \
   && if [ -z "$RSTUDIO_VERSION" ]; \
     then RSTUDIO_URL="https://www.rstudio.org/download/latest/stable/server/bionic/rstudio-server-latest-amd64.deb"; \
     else RSTUDIO_URL="http://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb"; fi \
@@ -268,6 +272,11 @@ RUN install2.r --error --deps TRUE --repos "https://cran.microsoft.com/snapshot/
 RUN wget -P /tmp/ "https://cran.r-project.org/src/contrib/compareDF_2.0.1.tar.gz" \
 && R -e "install.packages('/tmp/compareDF_2.0.1.tar.gz', repos = NULL, type = 'source')" \
 && rm "/tmp/compareDF_2.0.1.tar.gz"
+
+# Provides utilities for handling fasta files
+RUN conda install exonerate
+# pcre2grep uses patterns that are compatible with the regular expressions of Perl 5
+#RUN conda install -c conda-forge pcre2
 
 # Save up some space
 RUN apt-get clean \
