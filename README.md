@@ -38,7 +38,7 @@ posts about [Working Directories and
 RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
 and [Project
 organisation](https://biolearnr.blogspot.com/2017/05/project-organisation.html)
-have also given some inspiration some parts of the project structure.
+have also given some inspiration to some parts of the project structure.
 
     project
     |- README.md                    # the top level description of content (this doc)
