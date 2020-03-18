@@ -8,9 +8,6 @@ biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_
 #csl: csl/pnas.csl
 subtitle: "Some example subtitle"
 subject: "This subject text can be viewed in pdf properties."
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = "output") })
-# Options influencing pdf output format
 #fontsize: 11pt
 geometry: margin=1.0in
 keywords: 
