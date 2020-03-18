@@ -230,15 +230,6 @@ ENV PATH /opt/conda/bin:$PATH
 # Updating conda seems important for biopython to work properly
 RUN conda update conda
 
-RUN conda update -n base -c defaults conda
-RUN conda config --add channels conda-forge
-RUN conda config --add channels bioconda
-
-# Install bio-perl, biopython and gawk
-RUN conda install python=3.7 biopython 
-RUN conda install perl-bioperl
-RUN conda install -c anaconda gawk
-
 #### R packages
 
     # Example package from Bioconductor: GSEA with topGO
@@ -273,6 +264,15 @@ RUN wget -P /tmp/ "https://cran.r-project.org/src/contrib/compareDF_2.0.1.tar.gz
 && R -e "install.packages('/tmp/compareDF_2.0.1.tar.gz', repos = NULL, type = 'source')" \
 && rm "/tmp/compareDF_2.0.1.tar.gz"
 
+RUN conda update -n base -c defaults conda
+RUN conda config --add channels conda-forge
+RUN conda config --add channels bioconda
+
+# Install bio-perl, biopython and gawk
+RUN conda install python=3.7 biopython 
+RUN conda install perl-bioperl
+# Gawk is much more powerful than by default provided mawk
+RUN conda install -c anaconda gawk
 # Provides utilities for handling fasta files
 RUN conda install exonerate
 # pcre2grep uses patterns that are compatible with the regular expressions of Perl 5
