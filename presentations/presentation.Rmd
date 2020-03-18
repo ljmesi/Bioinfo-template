@@ -1,0 +1,32 @@
+---
+title: Title of the presentation
+subtitle: <font size='7'>A subtitle here</font>
+author: <font size='5'>Author's name `r Sys.Date()`</font>
+output: 
+  revealjs::revealjs_presentation:
+    self_contained: false
+    reveal_plugins: ["chalkboard","search","notes","zoom","menu"]
+    slide_level: 2
+    incremental: false
+    fig_caption: true
+    css: style.css
+    
+---
+
+# Overview
+
+1. The current status
+
+2. Tasks performed
+
+## 1. The current status
+
+Not started yet.
+
+## 2. Tasks performed
+
+Haven't done much yet.
+
+# Resources
+
+- [R Markdown Format for reveal.js Presentations](https://github.com/rstudio/revealjs)

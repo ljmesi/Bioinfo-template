@@ -1,0 +1,31 @@
+.reveal p {
+  text-align: left;
+}
+.reveal ul {
+  display: block;
+}
+/*.reveal .slide-background {
+  width: 70%;
+}*/
+.reveal ol {
+  display: block;
+}
+
+.reveal section img {
+  /*margin: 15px 0px;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*background: rgba(255, 255, 255, 0.12);*/
+  border: none;
+  box-shadow: none;
+  }
+
+.reveal .row {
+  display: flex;
+}
+
+.reveal .column {
+  flex: 33.33%;
+  padding: 5px;
+}

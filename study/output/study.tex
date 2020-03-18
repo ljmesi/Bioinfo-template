@@ -1,0 +1,340 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Example title name},
+  pdfauthor={Author name},
+  pdfsubject={This subject text can be viewed in pdf properties.},
+  pdfkeywords={these, keywords, are visible in, pdf properties},
+  colorlinks=true,
+  linkcolor=MidnightBlue,
+  filecolor=Maroon,
+  citecolor=Aquamarine,
+  urlcolor=NavyBlue,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1.0in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\pagestyle{headings}
+% https://github.com/rstudio/rmarkdown/issues/337
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+% https://github.com/rstudio/rmarkdown/pull/252
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+
+\pretitle{\vspace{\droptitle}\centering\huge}
+\posttitle{\par}
+
+\preauthor{\centering\large\emph}
+\postauthor{\par}
+
+\predate{\centering\large\emph}
+\postdate{\par}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
+  {\par}
+
+\title{Example title name}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Some example subtitle}
+\author{Author name}
+\date{2020-03-17}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=NavyBlue}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\clearpage
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Here is introduction to this example document. This document is written in R Studio server (RStudio Team \protect\hyperlink{ref-RStudioTeam2020}{2020}) and running in R Docker container (Boettiger and Eddelbuettel \protect\hyperlink{ref-Boettiger2017}{2017}).
+
+\hypertarget{the-file-structure}{%
+\subsection{The file structure}\label{the-file-structure}}
+
+The file structure of this default project is inspired by \href{https://github.com/SchlossLab/new_project}{SchlossLabs new\_project github repository}, article by Wilson et al. (\protect\hyperlink{ref-Wilson2017}{2017}) and
+
+Here below is a simple schema of it:
+
+\begin{verbatim}
+project
+|- README.md                                    # the top level description of content (this doc)
+|- CONTRIBUTING                                 # instructions for how to contribute to your project
+|- LICENSE                                      # the license for this project
+|- CITATION                                     # instructions on how to cite the work
+|
+|- study/
+| |- header.sty                                 # LaTeX header file to format pdf version of manuscript
+| |- bibliography.bib                           # BibTeX formatted references
+| |- csl/                                       # csl files to format references
+| |- study.Rmd                                  # executable Rmarkdown for this study, if applicable
+| +- output/                                    # images and other graphics for the presentation
+| | |- study.md                                 # Markdown (GitHub) version of the *.Rmd file
+| | |- study.tex                                # TeX version of *.Rmd file
+| | |- study.pdf                                # PDF version of *.Rmd file
+| | |- study.html                               # html version of *.Rmd file
+|
+|- data                                         # raw and primary data, are not changed once created
+| |- references/                                # reference files to be used in analysis
+| |- raw/                                       # raw data, will not be altered
+| |- processed/                                 # cleaned data, will not be altered once created;
+|                                               # will be committed to repo
+|
+|- docker                                       # Files related to docker virtualisation
+| |- Dockerfile                             # Dockerfile defining the development environment
+| |- add_shiny.sh                           # These four files below are all configuration files
+| |- disable_auth_rserver.conf    # used in building an image from the Dockerfile
+| |- pam-helper.sh                          # obtained from Rocker projects github page:
+| |- userconf.sh                            # https://github.com/rocker-org/rocker-versioned/tree/master/rstudio
+|                                 # The Dockerfile has also heavily loaned code from the Rocker project:
+|                                 # https://www.rocker-project.org/
+|
+|- presentations                                # presentations about the project 
+| |- _output.yaml                               # shared configurations for all presentations
+| |- style.css                                  # css for modifying features in presentation
+| |- presentation.Rmd                       # Rrevealjs presentation
+| |- presentation.html                      # rendered html of presentation.Rmd
+| |- images/                                    # images and other graphics for the presentation
+|
+|- scripts/                                     # any programmatic code
+|
+|- results                                      # all output from workflows and analyses
+| |- tables/                                    # tables and other tabular data
+| |- figures/                                   # graphs, likely designated for manuscript figures
+| |- pictures/                                  # diagrams, images, and other non-graph graphics
+|
+|- exploratory/                                 # exploratory data analysis for study
+| |- notebook/                                  # preliminary analyses
+| |- scratch/                                   # temporary files that can be safely deleted or lost
+|
+|- Snakefile                                    # executable Snakefile for this study, if applicable
+\end{verbatim}
+
+\clearpage
+
+\hypertarget{some-chapter}{%
+\section{Some chapter}\label{some-chapter}}
+
+I prefer that 1. level headings start from a new page and try not to have heading levels higher than 2.
+
+Here is an example Figure 1.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.67\textwidth,height=\textheight]{../presentations/images/example.jpg}
+\caption{Here is an example figure.}
+\end{figure}
+
+\hypertarget{here-is-a-sub-chapter}{%
+\subsection{Here is a sub chapter}\label{here-is-a-sub-chapter}}
+
+Footnotes can be inserted with a simple syntax\footnote{Here is a foot note text.}. The following Table 1 is an example.
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{Here is an example table.}\tabularnewline
+\toprule
+No & Column 1 & Column 2\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+No & Column 1 & Column 2\tabularnewline
+\midrule
+\endhead
+1 & Some & Data\tabularnewline
+2 & Here too & and here\tabularnewline
+3 & and finally & here\tabularnewline
+\bottomrule
+\end{longtable}
+
+In order to convert this Rmarkdown document to both html and pdf format, you should move this section in the YAML header:
+
+\begin{verbatim}
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    # For more pandoc args see:
+    # https://pandoc.org/MANUAL.html
+    pandoc_args: ["--top-level-division=section",
+                  "-V", "documentclass=article",
+                  "-V", "linkcolor=MidnightBlue",
+                  "-V", "citecolor=Aquamarine",
+                  "-V", "urlcolor=NavyBlue",
+                  "-V", "toccolor=NavyBlue",
+                  "-V", "pagestyle=headings"]
+\end{verbatim}
+
+above this section:
+
+\begin{verbatim}
+  bookdown::html_document2:
+    highlight: tango
+    theme: yeti
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: FALSE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: hide
+    number_sections: TRUE
+    code_download: TRUE
+    pandoc_args: ["--top-level-division=section",
+              "-V", "documentclass=report"]
+\end{verbatim}
+
+but below the line with \texttt{output:}. This is quite hacky but it works for now\ldots{}
+
+\clearpage
+
+\hypertarget{session-info}{%
+\section{Session info}\label{session-info}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+R version 3.6.1 (2019-07-05)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Debian GNU/Linux 9 (stretch)
+...
+\end{verbatim}
+
+\clearpage
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-Boettiger2017}{}%
+Boettiger, Carl, and Dirk Eddelbuettel. 2017. ``An Introduction to Rocker: Docker Containers for R.'' \emph{R Journal} 9 (2): 527--36. \url{https://rocker-project.org.\%20http://arxiv.org/abs/1710.03675}.
+
+\leavevmode\hypertarget{ref-RStudioTeam2020}{}%
+RStudio Team. 2020. ``RStudio: Integrated Development Environment for R.'' Boston, MA: RStudio, Inc. \url{http://www.rstudio.com/}.
+
+\leavevmode\hypertarget{ref-Wilson2017}{}%
+Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K Teal. 2017. ``Good enough practices in scientific computing.'' Edited by Francis Ouellette. \emph{PLOS Computational Biology} 13 (6): e1005510. \url{https://doi.org/10.1371/journal.pcbi.1005510}.
+\end{cslreferences}
+
+\end{document}

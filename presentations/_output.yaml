@@ -1,0 +1,17 @@
+revealjs::revealjs_presentation:
+  theme: simple # default, simple, sky, beige, serif, solarized, blood, moon, night, black, league, white
+  highlight: tango
+  center: false
+  smart: true # Seems to not work
+  transition: "fade" # "default", "fade", "slide", "concave", "zoom" or "none"
+  background_transition: "slide" # "default", "fade", "slide", "convex", "concave", "zoom" or "none"
+  slide_level: 1
+  self_contained: true
+  #reveal_plugins: ["chalkboard","search","notes","zoom","menu"]
+  reveal_options:
+    slideNumber: true
+    previewLinks: true
+    controls: true # Change to false before presentation
+    progress: true
+    hash: true
+    loop: false
