@@ -1,5 +1,5 @@
 ---
-title: "Bioinformatics project template"
+title: "Bioinfo template"
 bibliography: "study/bibliography.bib"
 #csl: study/csl/pnas.csl
 output: 
