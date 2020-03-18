@@ -109,34 +109,28 @@ knit_hooks$set(inline=function(x){
 
 # Global default options for chunks
 
-# include R source code in the output file?
-opts_chunk$set("echo" = TRUE)
-# evaluate the code chunk?
-opts_chunk$set("eval" = TRUE)
-# preserve warnings (produced by warning()) in the output?
-opts_chunk$set("warning" = TRUE)
-#preserve messages emitted by message() (similar to warning)?
-opts_chunk$set("message" = TRUE)
-
-opts_chunk$set("comment" = NA)
-
-opts_chunk$set("cache" = FALSE)
-opts_chunk$set("out_lines" = 3)
-opts_chunk$set("wrap_lines" = TRUE)
-line_length <- 80
-opts_chunk$set("wl_width" = line_length)
-opts_chunk$set("fig.align" = "center")
-opts_chunk$set(engine.path = list(
-  python = '/opt/conda/bin/python3'
-))
-# whether to reformat the R code
-# opts_chunk$set("tidy" = TRUE) 
-# # How should the tidying done with formatR https://yihui.org/formatr/
-# opts_chunk$set("tidy.opts" = list(blank = TRUE, 
-#                                   width.cutoff = line_length,
-#                                   comment = TRUE,
-#                                   indent = 2,
-#                                   brace.newline = FALSE))
+opts_chunk$set(
+  "echo" = TRUE, # include R source code in the output file?
+  "eval" = TRUE, # evaluate the code chunk?
+  "warning" = TRUE, # preserve warnings (produced by warning()) in the output?
+  "message" = TRUE, #preserve messages emitted by message() (similar to warning)?
+  "comment" = NA, # What should precede chunk outputs? Default is ##
+  "cache" = FALSE, # Should all chunks be cached?
+  "out_lines" = 3, # How many lines are allowed to be outputed after chunks?
+  "wrap_lines" = TRUE, # Should chunk code be wrapped?
+  "wl_width" = 80, # How many characters are allowed on each chunk code line?
+  "fig.align" = "center", # Figures should be centered in html output
+  #"tidy" = TRUE,         # Should the R code be reformated?
+  # How should the tidying done with formatR? https://yihui.org/formatr/
+  #"tidy.opts" = list(blank = TRUE, 
+  #                   width.cutoff = line_length,
+  #                   comment = TRUE,
+  #                   indent = 2,
+  #                   brace.newline = FALSE)
+  engine.path = list(     # Engine paths
+    python = '/opt/conda/bin/python3'
+    )                      
+  )
 ```
 
 \clearpage
