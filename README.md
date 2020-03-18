@@ -1,4 +1,4 @@
-Bioif-project
+Bioinformatics project template
 ================
 
   - [Overview](#overview)

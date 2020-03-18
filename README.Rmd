@@ -1,5 +1,5 @@
 ---
-title: "Bioif-project"
+title: "Bioinformatics project template"
 bibliography: "study/bibliography.bib"
 #csl: csl/pnas.csl
 output: 
