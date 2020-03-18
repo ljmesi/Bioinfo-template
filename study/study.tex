@@ -148,7 +148,7 @@
 \makeatother
 \subtitle{Some example subtitle}
 \author{Author name}
-\date{2020-03-17}
+\date{2020-03-18}
 
 \begin{document}
 \maketitle
@@ -164,67 +164,6 @@
 \section{Introduction}\label{introduction}}
 
 Here is introduction to this example document. This document is written in R Studio server (RStudio Team \protect\hyperlink{ref-RStudioTeam2020}{2020}) and running in R Docker container (Boettiger and Eddelbuettel \protect\hyperlink{ref-Boettiger2017}{2017}).
-
-\hypertarget{the-file-structure}{%
-\subsection{The file structure}\label{the-file-structure}}
-
-The file structure of this default project is inspired by \href{https://github.com/SchlossLab/new_project}{SchlossLabs new\_project github repository}, article by Wilson et al. (\protect\hyperlink{ref-Wilson2017}{2017}) and
-
-Here below is a simple schema of it:
-
-\begin{verbatim}
-project
-|- README.md                                    # the top level description of content (this doc)
-|- CONTRIBUTING                                 # instructions for how to contribute to your project
-|- LICENSE                                      # the license for this project
-|- CITATION                                     # instructions on how to cite the work
-|
-|- study/
-| |- header.sty                                 # LaTeX header file to format pdf version of manuscript
-| |- bibliography.bib                           # BibTeX formatted references
-| |- csl/                                       # csl files to format references
-| |- study.Rmd                                  # executable Rmarkdown for this study, if applicable
-| +- output/                                    # images and other graphics for the presentation
-| | |- study.md                                 # Markdown (GitHub) version of the *.Rmd file
-| | |- study.tex                                # TeX version of *.Rmd file
-| | |- study.pdf                                # PDF version of *.Rmd file
-| | |- study.html                               # html version of *.Rmd file
-|
-|- data                                         # raw and primary data, are not changed once created
-| |- references/                                # reference files to be used in analysis
-| |- raw/                                       # raw data, will not be altered
-| |- processed/                                 # cleaned data, will not be altered once created;
-|                                               # will be committed to repo
-|
-|- docker                                       # Files related to docker virtualisation
-| |- Dockerfile                             # Dockerfile defining the development environment
-| |- add_shiny.sh                           # These four files below are all configuration files
-| |- disable_auth_rserver.conf    # used in building an image from the Dockerfile
-| |- pam-helper.sh                          # obtained from Rocker projects github page:
-| |- userconf.sh                            # https://github.com/rocker-org/rocker-versioned/tree/master/rstudio
-|                                 # The Dockerfile has also heavily loaned code from the Rocker project:
-|                                 # https://www.rocker-project.org/
-|
-|- presentations                                # presentations about the project 
-| |- _output.yaml                               # shared configurations for all presentations
-| |- style.css                                  # css for modifying features in presentation
-| |- presentation.Rmd                       # Rrevealjs presentation
-| |- presentation.html                      # rendered html of presentation.Rmd
-| |- images/                                    # images and other graphics for the presentation
-|
-|- scripts/                                     # any programmatic code
-|
-|- results                                      # all output from workflows and analyses
-| |- tables/                                    # tables and other tabular data
-| |- figures/                                   # graphs, likely designated for manuscript figures
-| |- pictures/                                  # diagrams, images, and other non-graph graphics
-|
-|- exploratory/                                 # exploratory data analysis for study
-| |- notebook/                                  # preliminary analyses
-| |- scratch/                                   # temporary files that can be safely deleted or lost
-|
-|- Snakefile                                    # executable Snakefile for this study, if applicable
-\end{verbatim}
 
 \clearpage
 
@@ -332,9 +271,6 @@ Boettiger, Carl, and Dirk Eddelbuettel. 2017. ``An Introduction to Rocker: Docke
 
 \leavevmode\hypertarget{ref-RStudioTeam2020}{}%
 RStudio Team. 2020. ``RStudio: Integrated Development Environment for R.'' Boston, MA: RStudio, Inc. \url{http://www.rstudio.com/}.
-
-\leavevmode\hypertarget{ref-Wilson2017}{}%
-Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K Teal. 2017. ``Good enough practices in scientific computing.'' Edited by Francis Ouellette. \emph{PLOS Computational Biology} 13 (6): e1005510. \url{https://doi.org/10.1371/journal.pcbi.1005510}.
 \end{cslreferences}
 
 \end{document}
