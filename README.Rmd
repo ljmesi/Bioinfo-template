@@ -17,8 +17,7 @@ This is a working version of a template I use for new bioinformatic projects. Th
 
 ## Overview
 
-Here is a schema of the file structure. The file structure of this default project is heavily inspired by [SchlossLabs new_project github repository](https://github.com/SchlossLab/new_project), article by @Wilson2017 and 
-[Russ Hyde](https://github.com/russHyde)'s blog posts about [Working Directories and RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/) and [Project organisation](https://biolearnr.blogspot.com/2017/05/project-organisation.html).
+Here is a schema of the file structure. The file structure of this default project is heavily inspired by [SchlossLabs new_project github repository](https://github.com/SchlossLab/new_project), article by @Wilson2017. [Russ Hyde](https://github.com/russHyde)'s blog posts about [Working Directories and RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/) and [Project organisation](https://biolearnr.blogspot.com/2017/05/project-organisation.html) have also given some inspiration some parts of the project structure.
 
 ```
 project
