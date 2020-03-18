@@ -26,15 +26,15 @@ Bioinformatics project template
 This is a working version of a template I use for new bioinformatic
 projects. This template uses Docker containers for the R environment
 called [Rocker](https://www.rocker-project.org/). There is also a paper
-introducing Rocker by (1).
+introducing Rocker by Boettiger and Eddelbuettel (2017).
 
 ## Overview
 
 Here is a schema of the file structure. The file structure of this
 default project is heavily inspired by [SchlossLabs new\_project github
-repository](https://github.com/SchlossLab/new_project), article by (2).
-[Russ Hyde](https://github.com/russHyde)’s blog posts about [Working
-Directories and
+repository](https://github.com/SchlossLab/new_project), article by
+Wilson et al. (2017). [Russ Hyde](https://github.com/russHyde)’s blog
+posts about [Working Directories and
 RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
 and [Project
 organisation](https://biolearnr.blogspot.com/2017/05/project-organisation.html)
@@ -224,19 +224,23 @@ git config --global credential.helper store
 
 ## References
 
-<div id="refs" class="references">
+<div id="refs" class="references hanging-indent">
 
 <div id="ref-Boettiger2017">
 
-1\. Boettiger C, Eddelbuettel D (2017) An Introduction to Rocker: Docker
-Containers for R. *R Journal* 9(2):527–536.
+Boettiger, Carl, and Dirk Eddelbuettel. 2017. “An Introduction to
+Rocker: Docker Containers for R.” *R Journal* 9 (2): 527–36.
+[https://rocker-project.org.
+http://arxiv.org/abs/1710.03675](https://rocker-project.org.%20http://arxiv.org/abs/1710.03675).
 
 </div>
 
 <div id="ref-Wilson2017">
 
-2\. Wilson G, et al. (2017) Good enough practices in scientific
-computing. *PLOS Computational Biology* 13(6):e1005510.
+Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex
+Nederbragt, and Tracy K Teal. 2017. “Good enough practices in scientific
+computing.” Edited by Francis Ouellette. *PLOS Computational Biology* 13
+(6): e1005510. <https://doi.org/10.1371/journal.pcbi.1005510>.
 
 </div>
 

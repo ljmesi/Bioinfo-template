@@ -1,7 +1,7 @@
 ---
 title: "Bioinformatics project template"
 bibliography: "study/bibliography.bib"
-csl: study/csl/pnas.csl
+#csl: study/csl/pnas.csl
 output: 
   github_document:
     toc: TRUE
