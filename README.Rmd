@@ -184,3 +184,5 @@ git config --global color.ui true && \
 # Store the Github personal access token forever in .git-credentials file
 git config --global credential.helper store
 ```
+
+## References

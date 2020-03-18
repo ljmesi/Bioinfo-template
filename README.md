@@ -21,6 +21,7 @@ Bioif-project
       - [8. Removing images and
         containers](#removing-images-and-containers)
       - [Bonus step: configure git](#bonus-step-configure-git)
+  - [References](#references)
 
 This is a working version of a template I use for new bioinformatic
 projects. This template uses Docker containers for the R environment
@@ -219,6 +220,8 @@ git config --global color.ui true && \
 # Store the Github personal access token forever in .git-credentials file
 git config --global credential.helper store
 ```
+
+## References
 
 <div id="refs" class="references hanging-indent">
 
