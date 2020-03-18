@@ -2,24 +2,22 @@
 title: "Bioif-project"
 bibliography: "study/bibliography.bib"
 #csl: csl/pnas.csl
-output:
-  html_document:
-    split_by: none # only generate a single output page
-    toc: yes
-    keep_md: yes 
-    pandoc_args: ["--top-level-division=section",
-              "-V", "documentclass=report"]
+output: 
+  github_document:
+    toc: TRUE
+    html_preview: FALSE
+    keep_html: FALSE
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This is a working version of a template I use for new bioinformatic projects. This template uses Docker containers for the R environment called [Rocker](https://www.rocker-project.org/). A paper introducing Rocker can be found [here](https://doi.org/10.1371/journal.pcbi.1005510).
+This is a working version of a template I use for new bioinformatic projects. This template uses Docker containers for the R environment called [Rocker](https://www.rocker-project.org/). There is also a paper introducing Rocker by @Boettiger2017. 
 
 ## Overview
 
-Here is a schema of the file structure. The file structure of this default project is heavily inspired by [SchlossLabs new_project github repository](https://github.com/SchlossLab/new_project), article by [Wilson et al. 2017](https://doi.org/10.1371/journal.pcbi.1005510) and 
+Here is a schema of the file structure. The file structure of this default project is heavily inspired by [SchlossLabs new_project github repository](https://github.com/SchlossLab/new_project), article by @Wilson2017 and 
 [Russ Hyde](https://github.com/russHyde)'s blog posts about [Working Directories and RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/) and [Project organisation](https://biolearnr.blogspot.com/2017/05/project-organisation.html).
 
 ```
