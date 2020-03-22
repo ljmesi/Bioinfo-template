@@ -278,7 +278,8 @@ RUN conda install -c bioconda snakemake
 RUN conda install exonerate
 # pcre2grep uses patterns that are compatible with the regular expressions of Perl 5
 #RUN conda install -c conda-forge pcre2
-
+# For visualizing workflows
+RUN conda install -c conda-forge graphviz xorg-libxrender xorg-libxpm
 # Save up some space
 RUN apt-get clean \
 && rm -rf /var/lib/apt/lists/*
