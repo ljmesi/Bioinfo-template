@@ -94,7 +94,7 @@ The structure of this template project is inspired by:
   - [SchlossLabs new\_project github
     repository](https://github.com/SchlossLab/new_project)
 
-  - article by Wilson et al. (2017)
+  - an article by Wilson et al. (2017)
 
   - [Russ Hyde](https://github.com/russHyde)’s blog posts about [Working
     Directories and
@@ -147,13 +147,17 @@ containers.
 docker build -t image_name:version.number docker/
 ```
 
+Here you should exchange `image_name`, `version` and `number` with the
+appropriate values.
+
 ### 5\. Run Docker container using the newly built image
 
 ``` bash
 docker run --name container_name -e PASSWORD=some_really_good_password -p 8787:8787 -v $(pwd):/home/rstudio image_name:version.number
 ```
 
-Some more information on running Rocker containers can be found
+Here you should exchange `container_name` with a suitable name. Some
+more information on running Rocker containers can be found
 [here](https://ropenscilabs.github.io/r-docker-tutorial/).
 
 ### 6\. Access RStudio-Server running in the container through a browser
@@ -195,7 +199,7 @@ Images can be removed with:
 ``` bash
 # Using image_name:version.number
 docker rmi image_name:version.number 
-# Or using the image ID
+# Or using the image ID (2791ce80edf0)
 docker rmi 2791ce80edf0
 ```
 
