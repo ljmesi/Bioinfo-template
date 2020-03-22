@@ -30,15 +30,23 @@ introducing Rocker by Boettiger and Eddelbuettel (2017).
 
 ## Overview
 
-Here is a schema of the file structure. The file structure of this
-default project is heavily inspired by [SchlossLabs new\_project github
-repository](https://github.com/SchlossLab/new_project), article by
-Wilson et al. (2017). [Russ Hyde](https://github.com/russHyde)’s blog
-posts about [Working Directories and
-RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
-and [Project
-organisation](https://biolearnr.blogspot.com/2017/05/project-organisation.html)
-have also given some inspiration to some parts of the project structure.
+Here is a schema of the file structure. The structure of this template
+project is inspired by:
+
+  - [SchlossLabs new\_project github
+    repository](https://github.com/SchlossLab/new_project)
+
+  - article by Wilson et al. (2017)
+
+  - [Russ Hyde](https://github.com/russHyde)’s blog posts about [Working
+    Directories and
+    RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
+
+  - [Mario Krapp](https://github.com/mkrapp)’s cookiecutter [boilerplate
+    for Reproducible
+    research](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
+<!-- end list -->
 
     project
     |- README.md                    # the top level description of content (this doc)
