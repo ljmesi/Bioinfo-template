@@ -1,0 +1,6 @@
+{
+    "full_name": "Lauri Mesilaakso",
+    "project_name": "Name of your bioinformatics project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_short_description": "A short description of your project"
+}
