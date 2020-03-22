@@ -2,14 +2,15 @@ Bioinfo template
 ================
 
   - [Overview](#overview)
+  - [Sources](#sources)
   - [Prerequisites](#prerequisites)
   - [Steps for getting up and
     running](#steps-for-getting-up-and-running)
       - [1. <span>Navigate in terminal</span> to the wished
         directory](#navigate-in-terminal-to-the-wished-directory)
-      - [2. Clone the repository](#clone-the-repository)
-      - [3. Navigate to the repository
-        root](#navigate-to-the-repository-root)
+      - [2. Run cookiecutter](#run-cookiecutter)
+      - [3. Navigate to the created project
+        directory](#navigate-to-the-created-project-directory)
       - [4. Build Docker image using
         Dockerfile](#build-docker-image-using-dockerfile)
       - [5. Run Docker container using the newly built
@@ -20,7 +21,9 @@ Bioinfo template
         container](#stopping-and-starting-a-container)
       - [8. Removing images and
         containers](#removing-images-and-containers)
-      - [Bonus step: configure git](#bonus-step-configure-git)
+      - [Bonus step 1: Initialise git
+        repository](#bonus-step-1-initialise-git-repository)
+      - [Bonus step 2: configure git](#bonus-step-2-configure-git)
   - [References](#references)
 
 This is a working version of a template I use for new bioinformatic
@@ -30,23 +33,7 @@ introducing Rocker by Boettiger and Eddelbuettel (2017).
 
 ## Overview
 
-Here is a schema of the file structure. The structure of this template
-project is inspired by:
-
-  - [SchlossLabs new\_project github
-    repository](https://github.com/SchlossLab/new_project)
-
-  - article by Wilson et al. (2017)
-
-  - [Russ Hyde](https://github.com/russHyde)’s blog posts about [Working
-    Directories and
-    RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
-
-  - [Mario Krapp](https://github.com/mkrapp)’s cookiecutter [boilerplate
-    for Reproducible
-    research](https://github.com/mkrapp/cookiecutter-reproducible-science)
-
-<!-- end list -->
+Here is a schema of the file structure:
 
     project
     |- README.md                    # the top level description of content (this doc)
@@ -100,41 +87,52 @@ project is inspired by:
     |
     |- Snakefile                    # executable Snakefile for this study, if applicable
 
+## Sources
+
+The structure of this template project is inspired by:
+
+  - [SchlossLabs new\_project github
+    repository](https://github.com/SchlossLab/new_project)
+
+  - article by Wilson et al. (2017)
+
+  - [Russ Hyde](https://github.com/russHyde)’s blog posts about [Working
+    Directories and
+    RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
+
+  - [Mario Krapp](https://github.com/mkrapp)’s cookiecutter [boilerplate
+    for Reproducible
+    research](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
 ## Prerequisites
 
 There are some pieces of software that are needed to get this
 development environment up and running. You should install:
 
-  - Docker: <https://docs.docker.com/install/>
-  - Git: <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
+  - [Docker](https://docs.docker.com/install/)
+
+  - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+  - [Cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.0/installation.html)
 
 ## Steps for getting up and running
 
 ### 1\. [Navigate in terminal](https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management) to the wished directory
 
 Your working directory should be the location where you wish to have
-your Bioinformatic project in. This is the location where you will
-download this Git repository with `git clone` command.
+your project in. This is the location where you will setup the project
+using cookiecutter.
 
-### 2\. Clone the repository
-
-In order to get access to the files in the repository you should clone
-this repository with command (on terminal):
+### 2\. Run cookiecutter
 
 ``` bash
-git clone https://github.com/ljmesi/Bioinfo-template.git
+cookiecutter https://github.com/ljmesi/bioinfo-template.git
 ```
 
-More information about cloning a repository can be found
-[here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-and
-[here](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone)
-is some more information on the `git clone` command.
-
-### 3\. Navigate to the repository root
+### 3\. Navigate to the created project directory
 
 ``` bash
-cd Bioinfo-template
+cd {{cookiecutter.project_name}}
 ```
 
 ### 4\. Build Docker image using Dockerfile
@@ -216,7 +214,12 @@ can be found general information on removing images and containers.
 [here](https://docs.docker.com/engine/reference/commandline/rmi/) are
 links to `docker rm` and `docker rmi` command descriptions respectively.
 
-### Bonus step: configure git
+### Bonus step 1: Initialise git repository
+
+[Here](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
+are terrific instructions on how to initialise a git repository.
+
+### Bonus step 2: configure git
 
 Git can be configured in RStudio server by running the following
 commands in the terminal panel:
@@ -225,7 +228,7 @@ commands in the terminal panel:
 git config --global user.name "your_Github_user_name" && \
 git config --global user.email "your_email@address.com" && \
 git config --global color.ui true && \
-# Store the Github personal access token forever in .git-credentials file
+# Store the Github personal access token permanently in .git-credentials file
 git config --global credential.helper store
 ```
 

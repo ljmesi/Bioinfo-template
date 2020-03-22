@@ -17,15 +17,7 @@ This is a working version of a template I use for new bioinformatic projects. Th
 
 ## Overview
 
-Here is a schema of the file structure. The structure of this template project is inspired by:
-
-- [SchlossLabs new_project github repository](https://github.com/SchlossLab/new_project)
-
-- article by @Wilson2017
-
-- [Russ Hyde](https://github.com/russHyde)'s blog posts about [Working Directories and RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
-
-- [Mario Krapp](https://github.com/mkrapp)'s cookiecutter [boilerplate for Reproducible research](https://github.com/mkrapp/cookiecutter-reproducible-science)
+Here is a schema of the file structure:
 
 ```
 project
@@ -81,33 +73,44 @@ project
 |- Snakefile       				# executable Snakefile for this study, if applicable
 ```
 
+## Sources
+
+The structure of this template project is inspired by:
+
+- [SchlossLabs new_project github repository](https://github.com/SchlossLab/new_project)
+
+- article by @Wilson2017
+
+- [Russ Hyde](https://github.com/russHyde)'s blog posts about [Working Directories and RMarkdown](https://russ-hyde.rbind.io/post/working-directories-and-rmarkdown/)
+
+- [Mario Krapp](https://github.com/mkrapp)'s cookiecutter [boilerplate for Reproducible research](https://github.com/mkrapp/cookiecutter-reproducible-science)
+
 ## Prerequisites
 
 There are some pieces of software that are needed to get this development environment up and running. You should install:
 
-- Docker: https://docs.docker.com/install/
-- Git:  https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+- [Docker](https://docs.docker.com/install/)
+
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+- [Cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.0/installation.html)
 
 ## Steps for getting up and running
 
 ### 1. [Navigate in terminal](https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management) to the wished directory
 
-   Your working directory should be the location where you wish to have your Bioinformatic project in. This is the location where you will download this Git repository with `git clone` command.
+   Your working directory should be the location where you wish to have your project in. This is the location where you will setup the project using cookiecutter.
 
-### 2. Clone the repository
-
-   In order to get access to the files in the repository you should clone this repository with command (on terminal):
+### 2. Run cookiecutter
 
    ```bash
-git clone https://github.com/ljmesi/Bioinfo-template.git
+cookiecutter https://github.com/ljmesi/bioinfo-template.git
    ```
 
-   More information about cloning a repository can be found [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) and [here](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone) is some more information on the `git clone` command.
-
-### 3. Navigate to the repository root
+### 3. Navigate to the created project directory
 
    ```bash
-cd Bioinfo-template
+cd {{cookiecutter.project_name}}
    ```
 
 ### 4. Build Docker image using Dockerfile
@@ -179,7 +182,11 @@ docker rm 9fcd57ea7ccb
 
    [Here](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes#removing-docker-images) can be found general information on removing images and containers. [Here](https://docs.docker.com/engine/reference/commandline/rm/) and [here](https://docs.docker.com/engine/reference/commandline/rmi/) are links to `docker rm` and `docker rmi` command descriptions respectively.
 
-### Bonus step: configure git
+### Bonus step 1: Initialise git repository
+
+[Here](https://www.atlassian.com/git/tutorials/setting-up-a-repository) are terrific instructions on how to initialise a git repository.
+
+### Bonus step 2: configure git
 
 Git can be configured in RStudio server by running the following commands in the terminal panel:
 
@@ -187,7 +194,7 @@ Git can be configured in RStudio server by running the following commands in the
 git config --global user.name "your_Github_user_name" && \
 git config --global user.email "your_email@address.com" && \
 git config --global color.ui true && \
-# Store the Github personal access token forever in .git-credentials file
+# Store the Github personal access token permanently in .git-credentials file
 git config --global credential.helper store
 ```
 
