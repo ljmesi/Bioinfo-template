@@ -2,7 +2,7 @@ Bioinfo template
 ================
 
   - [Overview](#overview)
-  - [Sources](#sources)
+  - [Sources of inspiration](#sources-of-inspiration)
   - [Prerequisites](#prerequisites)
   - [Steps for getting up and
     running](#steps-for-getting-up-and-running)
@@ -24,6 +24,7 @@ Bioinfo template
       - [Bonus step 1: Initialise git
         repository](#bonus-step-1-initialise-git-repository)
       - [Bonus step 2: configure git](#bonus-step-2-configure-git)
+  - [License](#license)
   - [References](#references)
 
 This is a working version of a template I use for new bioinformatic
@@ -87,7 +88,7 @@ Here is a schema of the file structure:
     |
     |- Snakefile                    # executable Snakefile for this study, if applicable
 
-## Sources
+## Sources of inspiration
 
 The structure of this template project is inspired by:
 
@@ -235,6 +236,11 @@ git config --global color.ui true && \
 # Store the Github personal access token permanently in .git-credentials file
 git config --global credential.helper store
 ```
+
+## License
+
+This repository is released under the [BSD
+License](https://github.com/ljmesi/bioinfo-template/blob/master/LICENSE).
 
 ## References
 

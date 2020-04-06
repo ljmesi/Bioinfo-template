@@ -73,7 +73,7 @@ project
 |- Snakefile       				# executable Snakefile for this study, if applicable
 ```
 
-## Sources
+## Sources of inspiration
 
 The structure of this template project is inspired by:
 
@@ -199,5 +199,9 @@ git config --global color.ui true && \
 # Store the Github personal access token permanently in .git-credentials file
 git config --global credential.helper store
    ```
+
+## License
+
+This repository is released under the [BSD License](https://github.com/ljmesi/bioinfo-template/blob/master/LICENSE).
 
 ## References
