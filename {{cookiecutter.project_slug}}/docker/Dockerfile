@@ -46,10 +46,10 @@ RUN apt-get update \
     wget \
     libclang-dev \
     libclang-3.8-dev \
-    libobjc-6-dev \
-    libclang1-3.8 \
-    libclang-common-3.8-dev \
-    libllvm3.8 \
+    #libobjc-6-dev \
+    #libclang1-3.8 \
+    #libclang-common-3.8-dev \
+    #libllvm3.8 \
     libobjc4 \
     libgc1c2 \
     bzip2 \
