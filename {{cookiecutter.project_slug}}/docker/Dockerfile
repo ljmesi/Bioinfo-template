@@ -279,10 +279,10 @@ RUN conda config --add channels bioconda
 # Install bio-perl, biopython and gawk
 RUN conda install python=3.7 biopython 
 RUN conda install perl-bioperl
-# Gawk is much more powerful than by default provided mawk
-RUN conda install -c anaconda gawk
+# Gawk is much more powerful than the by default provided mawk
+RUN conda install -c conda-forge gawk
 RUN conda install -c bioconda snakemake
-# Provides utilities for handling fasta files
+# exonerate provides some utils for handling fasta files + is an aligner
 RUN conda install exonerate
 # pcre2grep uses patterns that are compatible with the regular expressions of Perl 5
 #RUN conda install -c conda-forge pcre2
