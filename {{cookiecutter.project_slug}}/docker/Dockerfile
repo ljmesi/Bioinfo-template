@@ -267,9 +267,10 @@ RUN install2.r --error --deps TRUE --repos "https://cran.microsoft.com/snapshot/
     here
 
 # Install compareDF from source (for comparing two data.frames)
-RUN wget -P /tmp/ "https://cran.r-project.org/src/contrib/compareDF_2.0.1.tar.gz" \
-&& R -e "install.packages('/tmp/compareDF_2.0.1.tar.gz', repos = NULL, type = 'source')" \
-&& rm "/tmp/compareDF_2.0.1.tar.gz"
+ARG COMP_DF_VERSION="2.1.0"
+RUN wget -P /tmp/ "https://cran.r-project.org/src/contrib/compareDF_${COMP_DF_VERSION}.tar.gz" \
+&& R -e "install.packages('/tmp/compareDF_${COMP_DF_VERSION}.tar.gz', repos = NULL, type = 'source')" \
+&& rm "/tmp/compareDF_${COMP_DF_VERSION}.tar.gz"
 
 RUN conda update -n base -c defaults conda
 RUN conda config --add channels conda-forge
