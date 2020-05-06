@@ -70,9 +70,9 @@ RUN apt-get update \
   && cp -r pandoc-templates*/* /opt/pandoc/templates && rm -rf pandoc-templates* \
   && mkdir /root/.pandoc && ln -s /opt/pandoc/templates /root/.pandoc/templates \
   # Download and install the latest version of pandoc
-  && wget -P /tmp/ https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb \
-  && dpkg -i /tmp/pandoc-2.9.1.1-1-amd64.deb \
-  && rm /tmp/pandoc-2.9.1.1-1-amd64.deb \
+  && wget -P /tmp/ https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb \
+  && dpkg -i /tmp/pandoc-${PANDOC_VERSION}-1-amd64.deb \
+  && rm /tmp/pandoc-${PANDOC_VERSION}-1-amd64.deb \
   ## RStudio wants an /etc/R, will populate from $R_HOME/etc
   && mkdir -p /etc/R \
   ## Write config files in $R_HOME/etc
