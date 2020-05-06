@@ -288,6 +288,9 @@ RUN conda install exonerate
 #RUN conda install -c conda-forge pcre2
 # For visualizing workflows
 RUN conda install -c conda-forge graphviz xorg-libxrender xorg-libxpm
+# Clean all cached material
+RUN conda clean --all -f -y
+
 # Save up some space
 RUN apt-get clean \
 && rm -rf /var/lib/apt/lists/*
