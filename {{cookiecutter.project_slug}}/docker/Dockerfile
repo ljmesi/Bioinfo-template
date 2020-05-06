@@ -1,23 +1,28 @@
 # This Dockerfile is a broad combination of Dockerfiles of rocker's rstudio, tidyverse and verse images 
 # with additions of some R packages and bioinformatics software. They can be found in: https://github.com/rocker-org/rocker
 # See also https://www.rocker-project.org/.
-FROM rocker/r-ver:3.6.1
+FROM rocker/r-ver:3.6.3
 
 ARG RSTUDIO_VERSION
-ENV RSTUDIO_VERSION=${RSTUDIO_VERSION:-1.2.5033}
+ENV RSTUDIO_VERSION=${RSTUDIO_VERSION:-1.2.5042}
 ARG S6_VERSION
-ARG PANDOC_TEMPLATES_VERSION
 ENV S6_VERSION=${S6_VERSION:-v1.21.7.0}
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 ENV PATH=/usr/lib/rstudio-server/bin:$PATH
-ENV PANDOC_TEMPLATES_VERSION=${PANDOC_TEMPLATES_VERSION:-2.9.1.1}
+
+ARG PANDOC_TEMPLATES_VERSION
+ENV PANDOC_TEMPLATES_VERSION=${PANDOC_TEMPLATES_VERSION:-2.9.2.1}
+
+ARG PANDOC_VERSION
+ENV PANDOC_VERSION=${PANDOC_VERSION:-2.9.2.1}
+
+ARG CTAN_SS_DATE="2020/05/06"
 
 # Version-stable CTAN repo from the tlnet archive at texlive.info, used in the
 # TinyTeX installation: chosen as the frozen snapshot of the TeXLive release
 # shipped for the base Debian image of a given rocker/r-ver tag.
-# Debian buster => TeXLive 2018, frozen release snapshot 2019/02/27
-ARG CTAN_REPO=${CTAN_REPO:-https://www.texlive.info/tlnet-archive/2020/01/18/tlnet}
-#ARG CTAN_REPO=${CTAN_REPO:-https://www.texlive.info/tlnet-archive/2019/02/27/tlnet}
+# Debian buster => TeXLive 2018, frozen release snapshot
+ARG CTAN_REPO=${CTAN_REPO:-https://www.texlive.info/tlnet-archive/${CTAN_SS_DATE}/tlnet}
 ENV CTAN_REPO=${CTAN_REPO}
 
 ENV PATH=$PATH:/opt/TinyTeX/bin/x86_64-linux/
