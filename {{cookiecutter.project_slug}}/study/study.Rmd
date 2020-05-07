@@ -54,6 +54,7 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 library(tidyverse)
+library(here)
 
 # Suppressing the number of chunk output lines 
 # the default output hook
@@ -146,7 +147,7 @@ I prefer that 1. level headings start from a new page and try not to have headin
 
 Here is an example Figure 1.
 
-![Here is an example figure.](../presentations/images/example.jpg){width=67%}
+![Here is an example figure.](`r here("presentations","images","example.jpg")`){width=67%}
 
 ## Here is a sub chapter
 
