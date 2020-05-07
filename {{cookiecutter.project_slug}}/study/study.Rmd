@@ -48,6 +48,7 @@ output:
     code_download: TRUE
     pandoc_args: ["--top-level-division=section",
               "-V", "documentclass=report"]
+    df_print: paged
 ---
 
 ```{r setup, include = FALSE}
