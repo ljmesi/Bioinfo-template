@@ -170,30 +170,33 @@ but below the line with `output: `. This is quite hacky but it works for now...
 # Environment information
 
 ```{bash}
-ENV_DEFINITION_FILE="environment_definition.txt"
-if [ ! -f "$ENV_DEFINITION_FILE" ]; then
-    conda list --explicit > "$ENV_DEFINITION_FILE"
-    echo "Writing environment definition file: $ENV_DEFINITION_FILE" 
+ENV_DEFINITION_YML="env_info.yml"
+ENV_DEFINITION_TXT="env_info.txt"
+
+function check_env {
+  SUFFIX=$(echo $1 | awk -F. '{print $2}')
+  if [ ! -f "$1" ]; then
+    if [ "$SUFFIX" == "yml" ]; then
+      conda env export --name base > "$1"
+      echo "Writing environment definition file: $1" 
+    elif [ "$SUFFIX" == "txt" ]; then
+      conda list --explicit > "$1"
+      echo "Writing environment definition file: $1" 
+    fi
 else
-    echo "Environment definition file: \"$ENV_DEFINITION_FILE\" already exists, skipping the writing..."
+    echo "Environment definition file: \"$1\" already exists, skipping the writing..."
 fi
+}
+
+check_env "$ENV_DEFINITION_YML"
+check_env "$ENV_DEFINITION_TXT"
 ```
 
-
 \clearpage
-# Environment info
-
-## R session details
+# Session information
 
 ```{r}
 sessionInfo()
-```
-
-## Conda environment information
-
-```{bash}
-conda list --explicit > env_info.txt
-conda env export --name base > env_info.yml
 ```
 
 \clearpage
