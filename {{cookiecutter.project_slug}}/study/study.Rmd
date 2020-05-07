@@ -179,15 +179,21 @@ else
 fi
 ```
 
-```{bash}
-conda list
-```
 
 \clearpage
-# Session info
+# Environment info
+
+## R session details
 
 ```{r}
 sessionInfo()
+```
+
+## Conda environment information
+
+```{bash}
+conda list --explicit > env_info.txt
+conda env export --name base > env_info.yml
 ```
 
 \clearpage
