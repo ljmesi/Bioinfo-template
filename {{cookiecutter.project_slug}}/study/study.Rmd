@@ -183,9 +183,9 @@ function check_env {
       conda list --explicit > "$1"
       echo "Writing environment definition file: $1" 
     fi
-else
+  else
     echo "Environment definition file: \"$1\" already exists, skipping the writing..."
-fi
+  fi
 }
 
 check_env "$ENV_DEFINITION_YML"
