@@ -170,13 +170,13 @@ but below the line with `output: `. This is quite hacky but it works for now...
 # Environment information
 
 ```{bash}
-ENV_DEFINITION_YML="env_info.yml"
+ENV_DEFINITION_YML="env_info.yaml"
 ENV_DEFINITION_TXT="env_info.txt"
 
 function check_env {
   SUFFIX=$(echo $1 | awk -F. '{print $2}')
   if [ ! -f "$1" ]; then
-    if [ "$SUFFIX" == "yml" ]; then
+    if [ "$SUFFIX" == "yaml" ]; then
       conda env export --name base > "$1"
       echo "Writing environment definition file: $1" 
     elif [ "$SUFFIX" == "txt" ]; then
