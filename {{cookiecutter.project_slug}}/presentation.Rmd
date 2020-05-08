@@ -1,7 +1,7 @@
 ---
 title: Title of the presentation
 subtitle: <font size='7'>A subtitle here</font>
-author: <font size='5'>Author's name `r Sys.Date()`</font>
+author: <font size='5'>{{ cookiecutter.full_name }} `r Sys.Date()`</font>
 output: 
   revealjs::revealjs_presentation:
     self_contained: false
@@ -9,7 +9,7 @@ output:
     slide_level: 2
     incremental: false
     fig_caption: true
-    css: style.css
+    css: presentation_style.css
     
 ---
 
