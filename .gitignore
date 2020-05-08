@@ -48,3 +48,6 @@ vignettes/*.pdf
 # Temporary files
 code/scratch/*
 !code/scratch/README.md
+
+# Snakemake logs
+.snakemake
