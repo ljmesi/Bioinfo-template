@@ -1,3 +1,3 @@
-# Directory contents
+# Contents
 
-This directory contains tests for the various functions.
+This directory contains tests for the code.

@@ -1,3 +1,3 @@
-# Directory contents
+# Contents
 
-This is the root directory for the project Dockerfile and configuration files required for building the image with it.
+This directory contains Dockerfile and configuration files required for building images for the exploratory analyses as well as for writing the manuscript.
