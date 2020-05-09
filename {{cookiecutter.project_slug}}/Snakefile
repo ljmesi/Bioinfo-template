@@ -1,0 +1,25 @@
+configfile: "Smake_config.yaml"
+
+singularity: "docker://continuumio/miniconda3:4.8"
+
+rule rule1:
+    input:
+        "data/"
+    output:
+        "data/processed/"
+    conda:
+        "Smake/environments/"
+    shell:
+        """
+        
+        """
+
+rule rule2:
+    input:
+        "data/"
+    output:
+        "data/processed/"
+    conda:
+        "Smake/environments/"
+    script:
+        "code/"
