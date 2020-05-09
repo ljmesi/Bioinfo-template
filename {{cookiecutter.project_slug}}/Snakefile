@@ -2,6 +2,10 @@ configfile: "Smake_config.yaml"
 
 singularity: "docker://continuumio/miniconda3:4.8"
 
+rule all:
+    input:
+        ""
+
 rule rule1:
     input:
         "data/"
