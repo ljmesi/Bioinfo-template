@@ -1,4 +1,4 @@
-configfile: "Smake_config.yaml"
+configfile: "Smake/config.yaml"
 
 singularity: "docker://continuumio/miniconda3:4.8"
 
