@@ -1,6 +1,7 @@
 configfile: "Smake/config.yaml"
 
-singularity: "docker://continuumio/miniconda3:4.8"
+# https://github.com/snakemake/snakemake/issues/179
+# container: "docker://continuumio/miniconda3:4.8"
 
 rule all:
     input:
