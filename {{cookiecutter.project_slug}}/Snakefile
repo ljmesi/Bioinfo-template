@@ -1,31 +1,18 @@
 configfile: "Smake/config.yaml"
 report: "Smake/report/workflow.rst"
 
+MAX_THREADS = 4
+
 # https://github.com/snakemake/snakemake/issues/179
 # container: "docker://continuumio/miniconda3:4.8"
+
+localrules:
+    all
 
 rule all:
     input:
         ""
-
-rule rule1:
-    input:
-        "data/"
-    output:
-        "data/processed/"
-    conda:
-        "Smake/environments/"
-    shell:
-        """
         
-        """
+# Load rules
 
-rule rule2:
-    input:
-        "data/"
-    output:
-        "data/processed/"
-    conda:
-        "Smake/environments/"
-    script:
-        "code/"
+include: "Smake/rules/example.smk"
